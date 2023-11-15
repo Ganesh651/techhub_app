@@ -1,0 +1,67 @@
+.login-conatiner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+.login-form{
+  background-color: rgb(255, 255, 255, 0.10);
+  padding: 20px;
+  width: 380px;
+  border-radius: 5px;
+}
+.website-logo{
+  color: #fff;
+  font-family: "Bree Serif";
+  font-size: 24px;
+  font-style: oblique;
+  font-weight: 600;
+}
+
+.login-input-container{
+  margin-bottom: 20px;
+}
+.login-input{
+  border: 1px solid #5c5b5b;
+  width: 100%;
+  height: 35px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: transparent;
+  outline: none;
+  color: #fff;
+}
+.login-label{
+  color: #fcf9f9;
+  font-size: 15px;
+}
+.checkbox-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.checkbox{
+  height: 18px;
+  width: 18px;
+}
+.show-password{
+  color: #fff;
+  margin-left: 6px;
+}
+.login-button-container{
+  margin-bottom: 20px;
+}
+.login-button{
+  background-color: #CF088C;
+  color: #fff;
+  height: 36px;
+  border: 0;
+  width: 100%;
+  border-radius: 20px;
+}
+.error-message{
+  color: rgb(241, 30, 30);
+  font-size: 14px;
+}

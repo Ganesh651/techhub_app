@@ -1,0 +1,11 @@
+.app-home{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+.image-{
+    width: 323px;
+    height: 215px;
+    flex-shrink: 0;
+}

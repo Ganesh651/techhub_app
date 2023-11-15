@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom'
+import SignUp from './components/SignUp';
+import Login from './components/Login';
+import Home from './components/Home';
+import Domain from './components/Domain';
+import WebHosting from './components/WebHosting';
+import Server from './components/Server';
+import ProtectedRoute from './components/ProtectedRoute'
+import Notfound from './components/Notfound';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () =>  (
+      <div className='container'>
+        <div className='app-container'>
+          <Routes>
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route  path="/login" element={<Login />} />
+            <Route path="/" element={
+              <ProtectedRoute>
+                  <Home />
+              </ProtectedRoute>
+            } />
+            <Route path="/domain" element={
+              <ProtectedRoute>
+                <Domain />
+              </ProtectedRoute>
+            } />
+            <Route path="/server" element={
+              <ProtectedRoute>
+                <Server />
+              </ProtectedRoute>
+            } />
+            <Route path="/web-hosting" element={
+              <ProtectedRoute>
+                <WebHosting />
+              </ProtectedRoute>
+            } />
+        <Route path="*" element={<Notfound />} />
+      </Routes>
+        </div>
+      </div>
+  )
+
 
 export default App;
